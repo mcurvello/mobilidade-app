@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
 import Feedback from "./src/screens/Feedback";
 import Home from "./src/screens/Home";
+import Map from "./src/screens/Map";
 
 function HomeScreen() {
   return (
@@ -23,6 +24,15 @@ function FeedbackScreen() {
   );
 }
 
+function MapScreen() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Map />
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
+}
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -31,6 +41,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {<Stack.Screen name="Home" component={HomeScreen} />}
         {<Stack.Screen name="Feedback" component={FeedbackScreen} />}
+        {<Stack.Screen name="Map" component={MapScreen} />}
       </Stack.Navigator>
     </NavigationContainer>
   );

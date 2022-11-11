@@ -31,7 +31,7 @@ export default function Home() {
       <Image source={store} />
       <View style={styles.icons}>
         <Stars quantity={stars} />
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Map")}>
           <Image source={map} style={styles.map} />
         </TouchableOpacity>
       </View>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     margin: 10,
     flexDirection: "row",
     alignItems: "center",
-    alignContent: "space-between",
+    justifyContent: "space-between",
   },
   map: {
     width: 40,
