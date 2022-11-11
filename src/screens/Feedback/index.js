@@ -28,7 +28,7 @@ export default function Feedback() {
       <ScrollView style={styles.container}>
         <Text style={styles.title}>Avaliações</Text>
         <View style={styles.card}>
-          <Stars quantity={stars} />
+          <Stars quantity={stars} editable={false} />
           <View style={styles.feed}>
             <Image source={profile} style={styles.profile} />
             <Text style={styles.description}>
@@ -38,7 +38,7 @@ export default function Feedback() {
           </View>
         </View>
         <View style={styles.card}>
-          <Stars quantity={stars} />
+          <Stars quantity={stars} editable={false} />
           <View style={styles.feed}>
             <Image source={profile} style={styles.profile} />
             <Text style={styles.description}>
@@ -49,7 +49,7 @@ export default function Feedback() {
         </View>
 
         <View style={styles.card}>
-          <Stars quantity={stars} />
+          <Stars quantity={stars} editable={false} />
           <View style={styles.feed}>
             <Image source={profile} style={styles.profile} />
             <Text style={styles.description}>
@@ -59,7 +59,7 @@ export default function Feedback() {
           </View>
         </View>
         <View style={styles.card}>
-          <Stars quantity={stars} />
+          <Stars quantity={stars} editable={false} />
           <View style={styles.feed}>
             <Image source={profile} style={styles.profile} />
             <Text style={styles.description}>

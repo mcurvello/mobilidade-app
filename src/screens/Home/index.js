@@ -23,6 +23,7 @@ export default function Home() {
   };
   return (
     <ScrollView style={styles.container}>
+      <Text style={styles.name}>AccessRoute</Text>
       <Input />
       <View style={styles.header}>
         <Image source={logo} />
@@ -30,7 +31,7 @@ export default function Home() {
       </View>
       <Image source={store} />
       <View style={styles.icons}>
-        <Stars quantity={stars} />
+        <Stars quantity={stars} editable={false} />
         <TouchableOpacity onPress={() => navigation.navigate("Map")}>
           <Image source={map} style={styles.map} />
         </TouchableOpacity>
@@ -56,6 +57,13 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  name: {
+    fontSize: 30,
+    fontWeight: "bold",
+    marginTop: 30,
+    marginLeft: 10,
+    color: "green",
   },
   header: {
     marginVertical: 20,
